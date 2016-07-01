@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Tutorial</title>
+    <!-- Not present in the tutorial. Just for basic styling. -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+
+
+    <p id=demo> Hello World!</p>
+    <script type="text/javascript">
+           document.write(5 + 6);
+           document.getElementById("demo").innerHTML="Hello world2!";
+    </script>
+
+    <p id="myPar">I am a paragraph.</p>
+    <div id="myDiv">I am a div.</div>
+    <p>Total count is: <div id="count"> </div> </p>
+
+    <p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    </p>
+
+
+    <p id="color"> change color </p>
+
+    <p>
+    <button type="button" onmouseover="change_color()">change color</button>
+    </p>
+
+    <script>
+    function myFunction() {
+       var count=incr();
+       if (count%2==0) {
+       document.getElementById("myPar").innerHTML = "Hello Dolly.";
+       document.getElementById("myDiv").innerHTML = "How are you?";
+       document.getElementById("count").innerHTML=count;
+       }
+       else {
+       document.getElementById("myPar").innerHTML = "I am a paragraph.";
+       document.getElementById("myDiv").innerHTML = "I am a div.";
+       document.getElementById("count").innerHTML=count;
+       }
+    }
+
+    function change_color () {
+      document.getElementById("color").style.color="blue"; 
+    }
+
+    var incr = (function () {
+        var i = 1;
+        return function () {
+           return i++;
+        }
+    })();
+
+</script>
+  </body>
+</html>
